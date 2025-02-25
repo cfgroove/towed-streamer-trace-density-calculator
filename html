@@ -1,0 +1,2281 @@
+
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<!-- Animate CSS -->
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+<!-- Montserrat Font -->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+</style>
+<!-- Custom Styling -->
+<style>
+    @media only screen and (max-width: 583px) {
+        .not_for_phone {
+            visibility: visible !important;
+        }
+    }
+
+    .not_for_phone {
+        visibility: hidden;
+    }
+</style>
+
+<h5 class="not_for_phone">(Not designed for phone use)</h5>
+
+
+<!-- <link rel="stylesheet" href="/static/assets/css/aqteq/aqteq_styling.css"> -->
+<link rel="stylesheet" href="https://unpkg.com/intro.js/minified/introjs.min.css" />
+<style>
+    .introjs-button {
+        border: 0;
+        display: inline-block;
+        padding: 10px 15px 9px;
+        font-size: 14px;
+        font-weight: bold;
+        font-family: 'Montserrat';
+        text-align: center;
+        background: #00565070;
+        color: #fff;
+        cursor: pointer;
+        text-align: center;
+        border: none;
+        background-size: 300% 100%;
+        border-radius: 50px;
+        text-decoration: none;
+        -webkit-box-shadow: 0px 14px 40px -15px rgba(0,0,255,0.35);
+        box-shadow: 0px 14px 40px -15px rgba(0,0,255,0.35);
+        border-radius: 10px;
+        color: var(--theme-white);
+        will-change: color,background-color,border-color;
+        text-shadow: none !important;
+    }
+
+    .introjs-button:focus {
+        border: 0;
+        display: inline-block;
+        padding: 10px 15px 9px;
+        font-family: 'Montserrat';
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        background: #00565070;
+        color: #fff;
+        cursor: pointer;
+        text-align: center;
+        border: none;
+        background-size: 300% 100%;
+        border-radius: 50px;
+        text-decoration: none;
+        -webkit-box-shadow: 0px 14px 40px -15px rgba(0,0,255,0.35);
+        box-shadow: 0px 14px 40px -15px rgba(0,0,255,0.35);
+        border-radius: 10px;
+        color: var(--theme-white);
+        will-change: color,background-color,border-color;
+        text-shadow: none !important;
+    }
+
+    .introjs-button:hover {
+        color: #fff;
+        background-position: 100% 0;
+        moz-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+        -webkit-box-shadow: 0px 54px 50px -42px rgba(17,36,72,0.1);
+        box-shadow: 0px 54px 50px -42px rgba(17,36,72,0.1);
+    }
+        
+    .introjs-prevbutton {
+        visibility: hidden;
+    }
+</style>
+
+<style>
+/* Toast styling */
+body {
+    background: #fafafa;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#download_icon:hover {
+    opacity: .7;
+}
+
+#help_icon:hover {
+    opacity: .7;
+    cursor: pointer;
+}
+
+.colored-toast.swal2-icon-success {
+    background-color: #a5dc86 !important;
+}
+
+.colored-toast.swal2-icon-error {
+    background-color: #f27474 !important;
+}
+
+.colored-toast.swal2-icon-warning {
+    background-color: #f8bb86 !important;
+}
+
+.colored-toast.swal2-icon-info {
+    background-color: #3fc3ee !important;
+}
+
+.colored-toast.swal2-icon-question {
+    background-color: #87adbd !important;
+}
+
+.colored-toast .swal2-title {
+    color: white;
+}
+
+.colored-toast .swal2-close {
+    color: white;
+}
+
+.colored-toast .swal2-html-container {
+    color: white;
+}
+
+.no_max_width {
+    max-width: 445px !important;
+    min-width: 445px;
+}
+
+/* Aqteq CSS */
+
+.center_div_within_row {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.table_row_header {
+    background:#f0f0f1;
+}
+
+.table_row_header_CMP {
+    background:#f0f0f1;
+}
+
+.source_id_header {
+    background:#f0f0f1;
+}
+
+.streamer_id_header {
+    background:#f0f0f1;
+}
+
+.table {
+    cursor: pointer;
+    margin-bottom: 35px;
+}
+
+.table th {
+    padding: .5rem;
+    border-top: none;
+}
+
+.table thead th {
+    border-bottom: none;
+}
+
+.table th {
+    padding: .5rem;
+}
+
+.streamer_offset_header {
+    width: 50px;
+}
+
+.inline_setback_header {
+    width: 50px;
+}
+
+.table_row_header {
+    width:160px;
+}
+
+.table_row_header_CMP {
+    width:50px;
+}
+
+.source_offset_header {
+    width: 50px;
+}
+
+.results {
+    font-weight: 600;
+}
+
+.card {
+    box-shadow: rgb(65 78 66 / 8%) 0 2px 8px 0;
+    border: 0.3px solid #80808061;
+    border-radius: 10px;
+}
+
+.row {
+    margin-bottom: 5px;
+}
+
+div {
+    font-family: "Montserrat";
+    font-size: 14px;
+}
+
+.inputs_card {
+    margin: 20px;
+}
+
+.inputs_card_bottom_row {
+    margin-top:20px;
+}
+
+.inputs_title {
+    white-space: nowrap;
+    margin: auto;
+    width: 50%;
+}
+
+.results_line {
+    margin: 20px 0px 0px 0px
+}  
+
+.input {
+    background-color: #fff;
+    border: 1px solid #939393; /* eff0f6; */
+    border-radius: 15px;
+    box-shadow: rgba(27, 25, 121, .05) 0 2px 8px 0;
+    box-sizing: border-box;
+    color: #0b0a33;
+    cursor: text;
+    display: block;
+    font-family: 'Montserrat';
+    /* font-size: 18px;
+    font-weight: 500; */
+    height: 15px;
+    line-height: 1.111em;
+    min-height: 15px;
+    padding:15px 20px;
+    transition: box-shadow 300ms,color 300ms,border-color 300ms;
+    /* vertical-align: middle; */
+    width: 80%;
+}
+
+.input:focus {
+    transition: 'box-shadow' 300ms,color 300ms,'border-color' 300ms;
+    bordeR: 1px solid black;
+    box-shadow: rgb(129 129 129 / 12%) 0 2px 8px 0;
+}
+
+
+.dropdown {
+    background-color: #fff;
+    border: 1px solid #939393; /* eff0f6; */
+    border-radius: 15px;
+    box-shadow: rgba(27, 25, 121, .05) 0 2px 8px 0;
+    box-sizing: border-box;
+    color: #0b0a33;
+    cursor: text;
+    display: block;
+    font-family: 'Montserrat';
+    line-height: 1.111em;
+    padding: 5px 15px;
+    transition: box-shadow 300ms,color 300ms,border-color 300ms;
+    /* vertical-align: middle; */
+    width: 80%;
+}
+
+.dropdown:focus {
+    transition: 'box-shadow' 300ms,color 300ms,'border-color' 300ms;
+    bordeR: 1px solid black;
+    box-shadow: rgb(129 129 129 / 12%) 0 2px 8px 0;
+}
+
+.error {
+    font-weight: bold;
+}
+
+
+.input_error_tip[data-tip] {
+    position:relative;
+    z-index: 99999!important;
+
+}
+
+.input_error_tip[data-tip]:before {
+    content:'';
+    /* hides the tooltip when not hovered */
+    display:none;
+    content:'';
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #000000bf;	
+    position:absolute;
+    top:30px;
+    left:35px;
+    z-index:8;
+    font-size:0;
+    line-height:0;
+    width:0;
+    height:0;
+}
+
+.input_error_tip[data-tip]:after {
+    display: none;
+    content: attr(data-tip);
+    position: absolute;
+    top: 35px;
+    left: 0px;
+    padding: 8px 12px;
+    background: #000000bf;
+    color: #fff;
+    z-index: 9;
+    font-size: 14px;
+    font-family: 'Montserrat';
+    height: 100%;
+    line-height: 18px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+.input_error_tip[data-tip]:hover:before,
+
+.input_error_tip[data-tip]:hover:after {
+    display:block;
+}
+
+.result_error {
+    background: #ffa50073;
+    border-radius: 12px;
+}
+
+.result_error[data-title]:hover:after {
+    opacity: 1;
+    transition: all 0.1s ease 0.5s;
+    visibility: visible;
+}
+
+.result_error[data-title]:after {
+    content: attr(data-title);
+    background-color: #fffcc1de;
+    color: #111;
+    font-size: 15px;
+    font-weight: bold;
+    position: absolute;
+    padding: 1px 5px 2px 5px;
+    bottom: -1.6em;
+    left: 100%;
+    /* white-space: nowrap; */
+    box-shadow: 1px 1px 3px #222222;
+    width: 165px;
+    border: 1px solid #111111;
+    z-index: 99999;
+    font-family: 'Montserrat';
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.result_error[data-title] {
+    position: relative;
+}
+
+.error[data-title]:hover:after {
+    opacity: 1;
+    transition: all 0.1s ease 0.5s;
+    visibility: visible;
+}
+
+.error[data-title]:after {
+    content: attr(data-title);
+    background-color: #f3153eeb;
+    color: #111;
+    font-size: 15px;
+    font-weight: bold;
+    position: absolute;
+    padding: 1px 5px 2px 5px;
+    bottom: -1.6em;
+    left: 100%;
+    /* white-space: nowrap; */
+    box-shadow: 1px 1px 3px #222222;
+    width: 165px;
+    border: 1px solid #111111;
+    z-index: 99999;
+    font-family: 'Montserrat';
+    border-radius: 10px;
+    opacity: 0;
+    visibility: none;
+}
+
+.error[data-title] {
+    position: relative;
+}
+
+.js-plotly-plot .plotly .modebar--hover > :not(.watermark) {
+    opacity: 1 !important;
+}
+.input_error {
+    font-weight: bold;
+    background-color: #ff00343d;
+    box-shadow: rgb(255 12 57 / 67%) 0 0px 10px 0;
+    /* border-top: none !important; */
+}
+
+.top_cards {
+    max-width: 600px;
+}
+
+table td:hover {
+    background-color: rgba(0,0,0,.075);
+}
+
+.introjs-skipbutton {
+    display: none;
+}
+
+.svg_container {
+    width: 55px;
+    height: 25px;
+    padding-left: 20px;
+}
+
+.hover_opacity:hover {
+    opacity: .7;
+}
+</style>
+
+<div class="row" style="padding-top:30px;">
+
+    <div class="col-12">
+
+        <div class="row">
+            <div class="svg_container" id="help_icon" onclick=startHelp()>
+                <svg width="25" height="auto" viewBox="0 0 512 512" fill="none">
+                    <path opacity="0.4" d="M256 8C119 8 8 119.08 8 256C8 392.92 119 504 256 504C393 504 504 393 504 256C504 119 393 8 256 8ZM256 430C246.902 430 238.008 427.302 230.444 422.248C222.879 417.193 216.983 410.009 213.502 401.603C210.02 393.198 209.109 383.949 210.884 375.026C212.659 366.103 217.04 357.906 223.473 351.473C229.906 345.04 238.103 340.659 247.026 338.884C255.949 337.109 265.198 338.02 273.603 341.502C282.009 344.983 289.193 350.879 294.248 358.444C299.302 366.008 302 374.902 302 384C301.987 396.196 297.136 407.888 288.512 416.512C279.888 425.136 268.196 429.987 256 430ZM296 298.67V300C296 303.183 294.736 306.235 292.485 308.485C290.235 310.736 287.183 312 284 312H228C224.817 312 221.765 310.736 219.515 308.485C217.264 306.235 216 303.183 216 300V296C216 254.94 247.13 238.53 270.65 225.34C290.82 214.03 303.19 206.34 303.19 191.34C303.19 171.52 277.92 158.34 257.49 158.34C230.3 158.34 218.05 171.48 200.19 194.13C198.244 196.597 195.407 198.202 192.29 198.6C189.173 198.999 186.024 198.158 183.52 196.26L148.82 170C146.377 168.149 144.735 165.432 144.231 162.409C143.727 159.385 144.4 156.284 146.11 153.74C173.4 113 208.16 90 262.66 90C319 90 379.19 134 379.19 192C379.19 269 296 270.21 296 298.67Z" fill="#9AE39D"/>
+                    <path d="M256 338C246.902 338 238.009 340.698 230.444 345.752C222.879 350.807 216.983 357.991 213.502 366.397C210.02 374.802 209.109 384.051 210.884 392.974C212.659 401.897 217.04 410.094 223.473 416.527C229.907 422.96 238.103 427.341 247.026 429.116C255.949 430.891 265.198 429.98 273.604 426.498C282.009 423.017 289.193 417.121 294.248 409.556C299.302 401.992 302 393.098 302 384C302 371.8 297.154 360.1 288.527 351.473C279.901 342.846 268.2 338 256 338ZM262.66 90C208.16 90 173.4 113 146.11 153.76C144.406 156.302 143.737 159.399 144.241 162.418C144.745 165.437 146.383 168.149 148.82 170L183.52 196.31C186.025 198.208 189.173 199.049 192.29 198.65C195.407 198.252 198.244 196.647 200.19 194.18C218.05 171.53 230.3 158.39 257.49 158.39C277.92 158.39 303.19 171.53 303.19 191.39C303.19 206.39 290.82 214.05 270.65 225.39C247.13 238.53 216 254.94 216 296V300C216 303.183 217.265 306.235 219.515 308.485C221.765 310.736 224.818 312 228 312H284C287.183 312 290.235 310.736 292.486 308.485C294.736 306.235 296 303.183 296 300V298.67C296 270.21 379.19 269 379.19 192C379.19 134 319 90 262.66 90V90Z" fill="#005752"/>
+                </svg>
+                
+                <meta id="recent_change" data-id="false">
+
+                <script>
+                    // $('.switch-button-checkbox')[0].click()
+
+                    function startHelp() {
+        
+                        const introJS = introJs().setOptions({
+                            tooltipPosition: 'bottom',
+                            doneLabel:'Done!',
+                            prevLabel: '',
+                            hidePrev: 'disabled',
+                            open: function(event, ui) {
+                                    $(".ui-dialog-titlebar-close").hide()
+                                  }
+                        }).onafterchange(function(element) {
+
+
+                            if (this._currentStep == 7 && $('.switch-button-checkbox')[0].checked == false && $('#recent_change').data('id') === false)
+                            {
+                                $('.switch-button-checkbox')[0].click()
+
+                                let current_step = this._currentStep
+                                introJS.exit()
+
+                                setTimeout(() => {
+                                    $('#recent_change').data('id', true)
+                                    introJS.goToStepNumber(current_step).start();
+                                    setTimeout(() => {
+                                        $('#recent_change').data('id', false)
+                                    }, 10);
+                                }, 501);
+
+                            }
+                            else if ((this._currentStep == 4 || this._currentStep == 5 || this._currentStep == 6) && $('.switch-button-checkbox')[0].checked == true && $('#recent_change').data('id') === false)
+                            {
+
+                                $('.switch-button-checkbox')[0].click()
+
+                                let current_step = this._currentStep
+                                introJS.exit()
+  
+                                setTimeout(() => {
+                                    $('#recent_change').data('id', true)
+                                    introJS.goToStepNumber(current_step).start();
+                                    setTimeout(() => {
+                                        $('#recent_change').data('id', false)
+                                    }, 10);
+                                }, 501);
+
+                            }
+
+                        }).start()
+        
+                    }
+                </script>
+            </div>
+        
+            <h5 onclick=startHelp() style="cursor: pointer;">Interactive Walkthrough</h5>
+        </div>
+
+    </div>
+
+
+</div>
+<!-- Toggle results / chart -->
+<meta id='chart_defaulted' data-info='false'>
+
+<style>
+    .animate__animated.animate__fadeIn {
+        --animate-duration: .5s;
+    }
+    .animate__animated.animate__fadeOutDown {
+        --animate-duration: 1.1s !important;
+    }
+</style>
+<style>
+    .switch-button {
+        font-family: 'Montserrat';
+        font-weight: 600;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        background: rgb(207 207 207 / 56%);
+        border-radius: 30px;
+        overflow: hidden;
+        width: 240px;
+        text-align: center;
+        font-size: 18px;
+        letter-spacing: 1px;
+        color: #000000;
+        position: relative;
+        padding-right: 120px;
+        position: relative;
+    }
+    .switch-button:before {
+        content: "Chart";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 3;
+        pointer-events: none;
+    }
+    .switch-button-checkbox {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 2;
+    }
+    .switch-button-checkbox:checked + .switch-button-label:before {
+        transform: translateX(120px);
+        transition: transform 300ms linear;
+    }
+    .switch-button-checkbox + .switch-button-label {
+        position: relative;
+        padding: 15px 0;
+        display: block;
+        user-select: none;
+        pointer-events: none;
+    }
+    .switch-button-checkbox + .switch-button-label:before {
+        content: "";
+        background: #c1f9bd;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 30px;
+        transform: translateX(0);
+        transition: transform 300ms;
+    }
+    .switch-button-checkbox + .switch-button-label .switch-button-label-span {
+        position: relative;
+    }
+</style>
+
+<div class="row animate__animated" style='margin:auto; margin-top: 15px' id="results_chart_toggle">
+    <div class="switch-button" style="height: 57px!important; margin-right: 55px"  data-title="Chart / Results Toggle" data-step="4" data-intro="Click this to toggle viewing results or the chart.">
+        <input class="switch-button-checkbox" type="checkbox" checked></input>
+        <label class="switch-button-label" for=""><span class="switch-button-label-span">Results</span></label>
+    </div>    
+</div>
+
+<!-- /Toggle results / chart -->
+
+<!-- Main page contents -->
+<div class="row page_spacer" style="margin-bottom: 40px">
+
+
+    <!-- Inputs -->
+    <div class="col-5 col-sm-10 card inputs_card top_cards" id="Inputs" style="height: 705px;">
+        <div class="card-body">
+            <h4 class="card-title">Inputs</h4>
+            <p class="card-text"></p>
+
+                <!-- Top Row -->
+                <div class="inputs_card_top_row">
+                    <div data-title="Basic streamer definition parameters" data-intro='Lateral streamer spacing is symmetrical about the vessel axis' data-step="1">
+                        <div class="row">
+                            <div class="col-6 inputs_title"># of Streamers</div>
+                            <div class="col-6">
+                                <input onkeyup=checkInputs(true) class="input" type="text" id="number_of_streamers" name="# of Streamers" placeholder="MAX 20" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 inputs_title">Streamer Spacing</div>
+                            <div class="col-6">
+                                <input onkeyup=checkInputs(true) class="input" type="text" id="streamer_spacing" name="Streamer Spacing" placeholder=">0" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 inputs_title">Streamer Length</div>
+                            <div class="col-6">
+                                <input onkeyup=checkInputs(true) class="input" type="text" id="streamer_length" name="Streamer Length" pattern="[0-9]" placeholder=">0" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" onkeydown="if(event.key==='.'){event.preventDefault();}" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 inputs_title">Group Spacing</div>
+                            <div class="col-6">
+                                <div id="group_spacing_tip" class="input_error_tip" data-tip="Group spacing must be less than streamer length">
+                                    <input onkeyup=checkInputs(true) class="input" type="text" id="group_spacing" name="Group Spacing" placeholder=">0 (<Length)" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-title="Streamer setbacks" data-tooltip-class="no_max_width"
+                    data-intro='
+                    The near trace setback distance is the setback distance of a a notional streamer directly behind the vessel.
+                    <br><br>
+                    Other streamers are setback based on the Setback Mode:<br><br>
+                    - <b>Level</b>: All streamers are setback the same (ie the near trace setback distance)<br>
+                    - <b>Radial</b>: Streamers are set back by the distance required to give the same near trace offset on each streamer. (This means that the near trace setback must be sufficient that the near trace offset is greater than the crosstrack offset of the outer streamer.)<br>
+                    - <b>Catenary</b>: Streamers are set back by an amount defined by a user input catenary rope length, whick must be greater than the distance between the outer streamers.<br>
+                    ' data-step="2">
+                        <div class="row">
+                            <div class="col-6 inputs_title">Near Trace Setback Distance</div>
+                            <div class="col-6">
+                                <div id="ntsd_tip" class="" data-tip="Near Trace Setback distance needs to be increased">
+                                    <input onkeyup=checkInputs(true) class="input" type="text" id="ntsd" name="Near Trace Setback Distance" placeholder="#" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 inputs_title">Setbacks</div>
+                            <div class="col-6">
+                                <select class="dropdown" id="setbacks" style="cursor:pointer" onchange=setbacksDropdownChanged()>
+                                    <option value="Level">Level</option>
+                                    <option value="Radial">Radial</option>
+                                    <option value="Catenary">Catenary</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" id="crl_row" style="visibility: hidden;">
+                        <div class="col-6 inputs_title">Catenary Rope Length</div>
+                        <div class="col-6">
+                            <div id="crl_tip" class="input_error_tip" data-tip="Rope Length must be greater than streamer spread">
+                                <input onkeyup=checkInputs(true) class="input" type="text" id="crl" name="" placeholder=">0" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Top Row (END) -->
+
+                <!-- Bottom Row -->
+                <style>
+                    .width350 {
+                        min-width: 350px;
+                    }
+                </style>
+                <div class="inputs_card_bottom_row" data-title="Shooting Parameters" data-tooltip-class="width350"
+                data-intro="
+                For “natural” binning, the Source Spacing should be equal to the streamer spacing divided by the number of sources. There are cases where other source spacings may be appropriate .. But use with care !
+                <br><br>
+                The shotpoint interval is “per source”; ie if you enter 3 sources at 25m, each source will fire every 75 meters
+                " data-step="3">
+
+                    <div class="row">
+                        <div class="col-6 inputs_title"># of Sources</div>
+                        <div class="col-6">
+                            <input onkeyup=checkInputs(true) class="input" type="text" id="number_of_sources" name="# of Sources" placeholder="MAX 8" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 results_title">Source Spacing</div>
+                        <div class="col-6">
+                            <input onkeyup=checkInputs(true) class="input" type="text" id="source_spacing" name="Source Spacing" placeholder=">0" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 results_title">Shotpoint Interval</div>
+                        <div class="col-6">
+                            <input onkeyup=checkInputs(true) class="input" type="text" id="shotpoint_interval" name="Source Spacing" placeholder=">0" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 results_title">Source Setback Distance</div>
+                        <div class="col-6">
+                            <input onkeyup=checkInputs(true) class="input" type="text" id="ssd" name="Source Setback Distance" placeholder=">0" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Bottom Row (END) -->
+
+        </div>
+    </div>
+    <!-- Inputs (END)-->
+
+    <div class="col-6 card col-lg-6  col-sm-10 animate__animated animate__fadeIn" id="Chart" style="display: flex; margin-top:20px; height: 705px; z-index: 9999">
+        <div style="max-width: 1300px;">
+            <div class="page_spacer" id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
+        </div>      
+    </div>
+
+
+    <!-- Results -->
+    <div class="col-5 col-sm-10 card inputs_card top_cards animate__animated animate__fadeIn" id="Results" style="display: none; z-index: 9999">
+        <div class="card-body" >
+
+            <style>
+                .sample {
+                    top: 0px !important;
+                }
+            </style>
+
+            <h4 class="card-title">Results</h4>
+            <p class="card-text"></p>
+                <div data-title="Crossline sampling results" data-tooltip-class="no_max_width sample"
+                data-intro='
+                The vessel line spacing is the natural vessel line spacing for the selected configuration. Note that acquiring data with a larger line spacing could result in aliased data and reduced trace density. Acquiring data with a reduced line spacing reults in increased trace density, and can be used on 4D projects to ensure matching offsets and azimuths are available.
+                <br><br>
+                CMP lines per vessel pass is simply the number of streamers multiplied by the number of sources.<br><br>
+                Uniform crossline sample is “Yes” if the the CMP lines are regularly spaced. In this case, the Nominal Crossline Sample Interval is the crossline bin size.<br><br>
+                Adjacent lines are interleaved is “No” if the sum of the source spacings is less than the streamer spacing.<br><br>
+                The configuration is a traditional/simple/natural one if the Uniform crossline sample is “Yes” and the Adjacent line interleave is “No”.<br><br>
+                Co-incident crossline samples flags a pathological case where the source spacing is equal to an integer multiple of the streamer spacing. In this case, 2 of the CMP lines are cooincident. Note that since the azimuths are different, they are still technically different samples of the subsurface … but binning it will be tricky!
+                ' data-step="5" data-tooltip-position="bottom">
+                    <div class="results_line">
+                        <div class="row">
+                            <div class="col-6 results_title">Vessel Line Spacing</div>
+                            <div class="col-6 center_div_within_row">
+                                <div class="results" id="vls"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="results_line">
+                        <div class="row">
+                            <div class="col-6 results_title">CMP Lines Per Vessel Pass</div>
+                            <div class="col-6 center_div_within_row">
+                                <div class="results" id="cmp"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="results_line">
+                        <div class="row">
+                            <div class="col-6 results_title">Uniform Crossline Sample</div>
+                            <div class="col-6 center_div_within_row"  data-title="Warning message">
+                                <div class="results" id="ucs"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="results_line">
+                        <div class="row">
+                            <div class="col-6 results_title">Adjacent Lines Interleaved</div>
+                            <div class="col-6 center_div_within_row" data-title="Warning message">
+                                <div class="results" id="ali"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="results_line">
+                        <div class="row">
+                            <div class="col-6 results_title">Co-incident Crossline Samples</div>
+                            <div class="col-6 center_div_within_row" data-title="Warning message">
+                                <div class="results" id="cics"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="results_line">
+                        <div class="row">
+                            <div class="col-6 results_title">Nominal Crossline Sample Interval</div>
+                            <div class="col-6 center_div_within_row">
+                                <div class="results" id="ncbs"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="results_line" data-title="Nominal in-line sample interval"
+                    data-intro='
+                    This is the recommended in-line bin size, and it is half of the smaller of the streamer group interval and the Shotpoint interval for an individual source.
+                    ' data-step="6">
+                    <div class="row">
+                        <div class="col-6 results_title">Nominal In-Line Sample Interval</div>
+                        <div class="col-6 center_div_within_row">
+                            <div class="results" id="nilbs"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results_line" data-title="Fold and Trace Density" data-tooltip-class="width350"
+                    data-intro='
+                    ACTeQ prefers to work with Trace Density, because it is unambiguous.<br><br>
+                    Fold is dependent on the selected bin size. In this application, we assume that the bin sizes are equal to the nominal sampling densities. Note that if the field “Uniform sampling density” is “No”, then some bins may be empty while others are double fold. In reality, streamer feathering, vessel steering and pre-stack migration make this a less valuable as a 3D metric. 
+                    ' data-step="7">
+                    <div class="results_line">
+                        <div class="row">
+                            <div class="col-6 results_title">Nominal Fold</div>
+                            <div class="col-6 center_div_within_row">
+                                <div class="results" id="fold"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="results_line">
+                        <div class="row">
+                            <div class="col-6 results_title">Trace Density<sub><br>(k traces / sq km)</sub>
+                            </div>
+                            <div class="col-6 center_div_within_row">
+                                <div class="results" id="trace_density"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+    </div>
+    <!-- Results (END) -->
+
+</div>
+
+ <!-- Download options -->
+ <div class="col-12" style="margin-bottom:30px; width: 100%">
+
+     <div class="row">
+         <div style="width: 21px; cursor: pointer;" data-step="9" data-title="Download Spreadsheet" data-intro="Lastly, you can download your inputs, the results, and the below geometry calculations to a CSV.">
+             <svg id="download_icon" onclick=sendTableData() viewBox="0 0 512 512" fill="none">
+                 <g clip-path="url(#clip0_526_1500)">
+                 <path opacity="0.4" d="M320 24.0001V192H407.7C425.5 192 434.4 213.5 421.8 226.1L269.7 378.3C266.071 381.904 261.165 383.927 256.05 383.927C250.936 383.927 246.029 381.904 242.4 378.3L90.1001 226.1C77.5001 213.5 86.4001 192 104.2 192H192V24.0001C191.992 20.8461 192.608 17.7217 193.811 14.8063C195.014 11.8909 196.782 9.24205 199.012 7.01186C201.242 4.78168 203.891 3.01416 206.806 1.81085C209.722 0.607537 212.846 -0.0078392 216 7.53839e-05H296C299.154 -0.0078392 302.278 0.607537 305.194 1.81085C308.109 3.01416 310.758 4.78168 312.988 7.01186C315.219 9.24205 316.986 11.8909 318.189 14.8063C319.393 17.7217 320.008 20.8461 320 24.0001V24.0001Z" fill="#2BE132"/>
+                 <path d="M488 352H341.3L292.3 401C287.539 405.779 281.882 409.57 275.653 412.157C269.424 414.744 262.745 416.076 256 416.076C249.255 416.076 242.576 414.744 236.347 412.157C230.118 409.57 224.461 405.779 219.7 401L170.7 352H24.0001C20.8461 351.992 17.7217 352.608 14.8063 353.811C11.8909 355.014 9.24205 356.782 7.01186 359.012C4.78168 361.242 3.01416 363.891 1.81085 366.806C0.607537 369.722 -0.0078392 372.846 7.53839e-05 376V488C-0.0078392 491.154 0.607537 494.278 1.81085 497.194C3.01416 500.109 4.78168 502.758 7.01186 504.988C9.24205 507.218 11.8909 508.986 14.8063 510.189C17.7217 511.393 20.8461 512.008 24.0001 512H488C491.154 512.008 494.278 511.393 497.194 510.189C500.109 508.986 502.758 507.218 504.988 504.988C507.218 502.758 508.986 500.109 510.189 497.194C511.393 494.278 512.008 491.154 512 488V376C512.008 372.846 511.393 369.722 510.189 366.806C508.986 363.891 507.218 361.242 504.988 359.012C502.758 356.782 500.109 355.014 497.194 353.811C494.278 352.608 491.154 351.992 488 352V352ZM368 448C364.836 448 361.742 447.062 359.111 445.304C356.48 443.546 354.429 441.047 353.218 438.123C352.007 435.199 351.69 431.982 352.307 428.879C352.925 425.775 354.449 422.924 356.686 420.686C358.924 418.449 361.775 416.925 364.879 416.308C367.982 415.69 371.199 416.007 374.123 417.218C377.047 418.429 379.545 420.48 381.304 423.111C383.062 425.742 384 428.836 384 432C384 436.244 382.314 440.313 379.314 443.314C376.313 446.314 372.244 448 368 448ZM432 448C428.836 448 425.742 447.062 423.111 445.304C420.48 443.546 418.429 441.047 417.218 438.123C416.007 435.199 415.69 431.982 416.307 428.879C416.925 425.775 418.449 422.924 420.686 420.686C422.924 418.449 425.775 416.925 428.879 416.308C431.982 415.69 435.199 416.007 438.123 417.218C441.047 418.429 443.545 420.48 445.304 423.111C447.062 425.742 448 428.836 448 432C448 436.244 446.314 440.313 443.314 443.314C440.313 446.314 436.244 448 432 448Z" fill="#005752"/>
+                 </g>
+                 <defs>
+                 <clipPath id="clip0_526_1500">
+                 <rect width="512" height="512" fill="white"/>
+                 </clipPath>
+                 </defs>
+             </svg>
+         </div>
+         <h5>&nbsp; Download CSV (Inputs, Results, & Geometry Calculations)</h5> 
+     </div>
+
+ </div>
+ <!-- Downlload options (END)-->
+
+<meta id="boat_trace_status" class="boat_trace_on">
+<meta id="source_data" data-json>
+<meta id="streamer_data" data-json>
+<meta id="inline_data" data-json>
+<meta id="CMP_data" data-json>
+<meta id="ssd_data" data-json>
+<meta id="setback_type_data" data-json>
+<meta id="inputs_data" data-json>
+<meta id="results_data" data-json>
+
+<!-- <meta id="error_status" class="null" style="visibility: none;"></meta> -->
+
+
+
+
+<!-- Download Table Option-->
+<!-- <div class="col-11" style="margin-top: 40px; padding-left: 20px;">
+    <div style="width:370px;" class="row" data-title="Export Results and Parameters"
+        data-intro="Archive your results into a CSV file that can be imported into Excel or used in TesserACT if you need to perform additional analysis, hazard avoidance or optimization." data-step="8">
+        <h3>Geometry Calculations &nbsp;</h3>
+
+    </div>
+
+</div> -->
+
+<div class="row page_spacer">
+
+<!-- Source Table -->
+    <div class="col-8">
+        <table class="table table-light table-hover" id="source_table">
+            <thead>
+                <tr>
+                    <th class="table_row_header">Source ID</th>
+                    <th id="source_id_1" class="source_id_header" scope="col">1</th>
+                    <th id="source_id_2" class="source_id_header" scope="col">2</th>
+                    <th id="source_id_3" class="source_id_header" scope="col">3</th>
+                    <th id="source_id_4" class="source_id_header" scope="col">4</th>
+                    <th id="source_id_5" class="source_id_header" scope="col">5</th>
+                    <th id="source_id_6" class="source_id_header" scope="col">6</th>
+                    <th id="source_id_7" class="source_id_header" scope="col">7</th>
+                    <th id="source_id_8" class="source_id_header" scope="col">8</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="table_row_header">Crossline source offsets</th>
+                    <td id="source_offset_1" class="source_offset_header"></td>
+                    <td id="source_offset_2" class="source_offset_header"></td>
+                    <td id="source_offset_3" class="source_offset_header"></td>
+                    <td id="source_offset_4" class="source_offset_header"></td>
+                    <td id="source_offset_5" class="source_offset_header"></td>
+                    <td id="source_offset_6" class="source_offset_header"></td>
+                    <td id="source_offset_7" class="source_offset_header"></td>
+                    <td id="source_offset_8" class="source_offset_header"></td>
+                </tr>
+                <tr>
+                    <th class="table_row_header">Inline source offsets</th>
+                    <td id="i_source_offset_1" class="source_offset_header"></td>
+                    <td id="i_source_offset_2" class="source_offset_header"></td>
+                    <td id="i_source_offset_3" class="source_offset_header"></td>
+                    <td id="i_source_offset_4" class="source_offset_header"></td>
+                    <td id="i_source_offset_5" class="source_offset_header"></td>
+                    <td id="i_source_offset_6" class="source_offset_header"></td>
+                    <td id="i_source_offset_7" class="source_offset_header"></td>
+                    <td id="i_source_offset_8" class="source_offset_header"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    
+
+<!-- Streamer Table -->
+      <div class="col-12">
+        <table class="table table-light table-hover" id="streamer_table">
+            <thead>
+                <tr>
+                    <th class="table_row_header">Streamer ID</th>
+                    <th id="streamer_id_1" class="streamer_id_header" scope="col">1</th>
+                    <th id="streamer_id_2" class="streamer_id_header" scope="col">2</th>
+                    <th id="streamer_id_3" class="streamer_id_header" scope="col">3</th>
+                    <th id="streamer_id_4" class="streamer_id_header" scope="col">4</th>
+                    <th id="streamer_id_5" class="streamer_id_header" scope="col">5</th>
+                    <th id="streamer_id_6" class="streamer_id_header" scope="col">6</th>
+                    <th id="streamer_id_7" class="streamer_id_header" scope="col">7</th>
+                    <th id="streamer_id_8" class="streamer_id_header" scope="col">8</th>
+                    <th id="streamer_id_9" class="streamer_id_header" scope="col">9</th>
+                    <th id="streamer_id_10" class="streamer_id_header" scope="col">10</th>
+                    <th id="streamer_id_11" class="streamer_id_header" scope="col">11</th>
+                    <th id="streamer_id_12" class="streamer_id_header" scope="col">12</th>
+                    <th id="streamer_id_13" class="streamer_id_header" scope="col">13</th>
+                    <th id="streamer_id_14" class="streamer_id_header" scope="col">14</th>
+                    <th id="streamer_id_15" class="streamer_id_header" scope="col">15</th>
+                    <th id="streamer_id_16" class="streamer_id_header" scope="col">16</th>
+                    <th id="streamer_id_17" class="streamer_id_header" scope="col">17</th>
+                    <th id="streamer_id_18" class="streamer_id_header" scope="col">18</th>
+                    <th id="streamer_id_19" class="streamer_id_header" scope="col">19</th>
+                    <th id="streamer_id_20" class="streamer_id_header" scope="col">20</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="table_row_header">Crossline streamer offsets</th>
+                    <td class="streamer_offset_header"></td>
+                    <td class="streamer_offset_header"></td>
+                    <td class="streamer_offset_header"></td>
+                    <td class="streamer_offset_header"></td>
+                    <td class="streamer_offset_header"></td>
+                    <td class="streamer_offset_header"></td>
+                    <td class="streamer_offset_header"></td>
+                    <td class="streamer_offset_header"></td>
+                    <td class="streamer_offset_header"></td>
+                    <td class="streamer_offset_header"></td>
+                    <td class="streamer_offset_header"></td>
+                    <td class="streamer_offset_header"></td>
+                    <td class="streamer_offset_header"></td>
+                    <td class="streamer_offset_header"></td>
+                    <td class="streamer_offset_header"></td>
+                    <td class="streamer_offset_header"></td>
+                    <td class="streamer_offset_header"></td>
+                    <td class="streamer_offset_header"></td>
+                    <td class="streamer_offset_header"></td>
+                    <td class="streamer_offset_header"></td>
+                </tr>
+                <tr>
+                    <th class="table_row_header">Inline Setback (<span id="setback_type">Radial</span>)</th>
+                    <td class="inline_setback_header"></td>
+                    <td class="inline_setback_header"></td>
+                    <td class="inline_setback_header"></td>
+                    <td class="inline_setback_header"></td>
+                    <td class="inline_setback_header"></td>
+                    <td class="inline_setback_header"></td>
+                    <td class="inline_setback_header"></td>
+                    <td class="inline_setback_header"></td>
+                    <td class="inline_setback_header"></td>
+                    <td class="inline_setback_header"></td>
+                    <td class="inline_setback_header"></td>
+                    <td class="inline_setback_header"></td>
+                    <td class="inline_setback_header"></td>
+                    <td class="inline_setback_header"></td>
+                    <td class="inline_setback_header"></td>
+                    <td class="inline_setback_header"></td>
+                    <td class="inline_setback_header"></td>
+                    <td class="inline_setback_header"></td>
+                    <td class="inline_setback_header"></td>
+                    <td class="inline_setback_header"></td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+
+<!-- CMP Table -->
+      <div class="col-12">
+        <table class="table table-light table-hover" id="CMP_Table">
+            <thead>
+                <tr>
+                    <th class="table_row_header_CMP"><b>CMP Table</b></th>
+                    <th class="table_row_header_CMP">Streamer ID</th>
+                    <th id="streamer_id_1" class="streamer_id_header" scope="col">1</th>
+                    <th id="streamer_id_2" class="streamer_id_header" scope="col">2</th>
+                    <th id="streamer_id_3" class="streamer_id_header" scope="col">3</th>
+                    <th id="streamer_id_4" class="streamer_id_header" scope="col">4</th>
+                    <th id="streamer_id_5" class="streamer_id_header" scope="col">5</th>
+                    <th id="streamer_id_6" class="streamer_id_header" scope="col">6</th>
+                    <th id="streamer_id_7" class="streamer_id_header" scope="col">7</th>
+                    <th id="streamer_id_8" class="streamer_id_header" scope="col">8</th>
+                    <th id="streamer_id_9" class="streamer_id_header" scope="col">9</th>
+                    <th id="streamer_id_10" class="streamer_id_header" scope="col">10</th>
+                    <th id="streamer_id_11" class="streamer_id_header" scope="col">11</th>
+                    <th id="streamer_id_12" class="streamer_id_header" scope="col">12</th>
+                    <th id="streamer_id_13" class="streamer_id_header" scope="col">13</th>
+                    <th id="streamer_id_14" class="streamer_id_header" scope="col">14</th>
+                    <th id="streamer_id_15" class="streamer_id_header" scope="col">15</th>
+                    <th id="streamer_id_16" class="streamer_id_header" scope="col">16</th>
+                    <th id="streamer_id_17" class="streamer_id_header" scope="col">17</th>
+                    <th id="streamer_id_18" class="streamer_id_header" scope="col">18</th>
+                    <th id="streamer_id_19" class="streamer_id_header" scope="col">19</th>
+                    <th id="streamer_id_20" class="streamer_id_header" scope="col">20</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th class="table_row_header_CMP">Source ID</th>
+                    <th class="table_row_header_CMP">X Line Offset</th>
+                    <td id="streamer_offset_1" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_2" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_3" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_4" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_5" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_6" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_7" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_8" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_9" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_10" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_11" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_12" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_13" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_14" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_15" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_16" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_17" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_18" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_19" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_20" class="streamer_offset_header"></td>
+                </tr>
+
+                <tr>
+                    <th class="table_row_header_CMP">1</th>
+                    <th class="table_row_header_CMP" id="source_offset_CMP_1"></th>
+                    <td id="streamer_offset_1" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_2" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_3" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_4" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_5" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_6" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_7" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_8" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_9" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_10" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_11" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_12" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_13" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_14" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_15" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_16" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_17" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_18" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_19" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_20" class="streamer_offset_header"></td>
+                </tr>
+
+                <tr>
+                    <th class="table_row_header_CMP">2</th>
+                    <th class="table_row_header_CMP" id="source_offset_CMP_2"></th>
+                    <td id="streamer_offset_1" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_2" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_3" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_4" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_5" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_6" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_7" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_8" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_9" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_10" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_11" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_12" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_13" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_14" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_15" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_16" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_17" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_18" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_19" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_20" class="streamer_offset_header"></td>
+                </tr>
+
+                <tr>
+                    <th class="table_row_header_CMP">3</th>
+                    <th class="table_row_header_CMP" id="source_offset_CMP_3"></th>
+                    <td id="streamer_offset_1" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_2" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_3" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_4" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_5" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_6" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_7" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_8" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_9" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_10" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_11" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_12" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_13" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_14" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_15" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_16" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_17" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_18" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_19" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_20" class="streamer_offset_header"></td>
+                </tr>
+
+                <tr>
+                    <th class="table_row_header_CMP">4</th>
+                    <th class="table_row_header_CMP" id="source_offset_CMP_4"></th>
+                    <td id="streamer_offset_1" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_2" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_3" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_4" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_5" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_6" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_7" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_8" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_9" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_10" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_11" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_12" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_13" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_14" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_15" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_16" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_17" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_18" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_19" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_20" class="streamer_offset_header"></td>
+                </tr>
+
+                <tr>
+                    <th class="table_row_header_CMP">5</th>
+                    <th class="table_row_header_CMP" id="source_offset_CMP_5"></td>
+                    <td id="streamer_offset_1" class="streamer_offset_header"></th>
+                    <td id="streamer_offset_2" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_3" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_4" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_5" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_6" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_7" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_8" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_9" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_10" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_11" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_12" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_13" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_14" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_15" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_16" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_17" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_18" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_19" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_20" class="streamer_offset_header"></td>
+                </tr>
+
+                <tr>
+                    <th class="table_row_header_CMP">6</th>
+                    <th class="table_row_header_CMP" id="source_offset_CMP_6"></th>
+                    <td id="streamer_offset_1" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_2" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_3" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_4" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_5" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_6" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_7" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_8" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_9" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_10" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_11" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_12" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_13" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_14" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_15" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_16" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_17" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_18" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_19" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_20" class="streamer_offset_header"></td>
+                </tr>
+
+                <tr>
+                    <th class="table_row_header_CMP">7</th>
+                    <th class="table_row_header_CMP" id="source_offset_CMP_7"></th>
+                    <td id="streamer_offset_1" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_2" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_3" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_4" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_5" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_6" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_7" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_8" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_9" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_10" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_11" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_12" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_13" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_14" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_15" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_16" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_17" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_18" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_19" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_20" class="streamer_offset_header"></td>
+                </tr>
+
+                <tr>
+                    <th class="table_row_header_CMP">8</th>
+                    <th class="table_row_header_CMP" id="source_offset_CMP_8"></th>
+                    <td id="streamer_offset_1" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_2" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_3" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_4" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_5" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_6" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_7" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_8" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_9" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_10" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_11" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_12" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_13" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_14" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_15" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_16" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_17" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_18" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_19" class="streamer_offset_header"></td>
+                    <td id="streamer_offset_20" class="streamer_offset_header"></td>
+                </tr>
+
+            </tbody>
+        </table>
+      </div>
+
+
+
+</div>
+
+<!-- Jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- SweetAlert -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- Plotly (Charts) -->
+<script src='https://cdn.plot.ly/plotly-2.9.0.min.js'></script>
+
+<!-- IntroJS -->
+<script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        slider()
+        defaultChart()
+        autoTest()
+    });
+
+    function slider() {
+        $('.switch-button-checkbox').on('click', function(event) {
+        if (this.checked === true) // true = chart;   false = results
+        {
+            // hide results
+            $('#Results').addClass('animate__fadeOutDown')
+            $('#OVT_Analysis').addClass('animate__fadeOutDown')
+            setTimeout(() => {
+                $('#Results').css({'display': 'none'})
+                $('#Results').removeClass('animate__fadeOutDown')
+                $('#OVT_Analysis').css({'display': 'none'})
+                $('#OVT_Analysis').removeClass('animate__fadeOutDown')
+
+                // show chart
+                $('#Chart').css({'display': 'flex'})
+                    setTimeout(() => {
+                        checkInputs(true) // generates updated chart, needs 100ms or else it will run too early.
+                    }, 10);
+                if ($('#chart_defaulted').data('info') == false)
+                {
+                    defaultChart()
+                    $('#chart_defaulted').data('info', true)
+                }
+            }, 500);
+        }
+        else
+        {
+            // hide chart
+            $('#Chart').addClass('animate__fadeOutDown')
+            setTimeout(() => {
+                $('#Chart').css({'display': 'none'})
+                $('#Chart').removeClass('animate__fadeOutDown')
+
+                // show results
+                $('#Results').css({'display': 'flex'})
+                $('#OVT_Analysis').css({'display': 'flex'})
+            }, 500);
+        }
+    })
+    }
+
+    function autoTest() {
+        document.getElementById('number_of_streamers').value = 12
+        document.getElementById('streamer_spacing').value = 100
+        document.getElementById('streamer_length').value = 6000
+        document.getElementById('group_spacing').value = 12.5
+        document.getElementById('ntsd').value = 1000
+        document.getElementById('crl').value = 1200
+        document.getElementById('number_of_sources').value = 2
+        document.getElementById('source_spacing').value = 50
+        document.getElementById('shotpoint_interval').value = 25
+        document.getElementById('ssd').value = 150
+
+        $('#setbacks').val('Radial')
+
+        checkInputs(true)
+    }
+
+
+
+    function defaultChart() {
+        default_trace = {
+            height: 800,
+            type: 'scatter',
+            // x: [-25,-25,0,25,25,-25],
+            // y: [-50,10,50,10,-50,-50],
+            mode: 'lines',
+            xaxis: {
+                    showgrid: false
+                },
+                yaxis: {
+                    showgrid: false,
+                    showline: true
+                },
+        };
+
+        var layout = {
+            showlegend: false,
+            showgrid: false,
+        };
+
+        var data = [default_trace]
+
+        Plotly.newPlot('myDiv', data, layout, config={responsive: true, 'displaylogo': false});
+
+        appendBoatTraceIcon()
+    }
+
+
+    function appendBoatTraceIcon() {
+
+        if (document.getElementById('boat_trace') == null) {
+
+            let nodeToDuplicate = document.getElementsByClassName('modebar-group')[0]
+            let newNode = nodeToDuplicate.cloneNode(true)
+            document.getElementsByClassName('modebar')[0].insertBefore(newNode, nodeToDuplicate)
+
+            newNode.getElementsByClassName('modebar-btn')[0].id = 'boat_trace'
+            newNode.getElementsByClassName('modebar-btn')[0].innerHTML = '<img id="boat_img" src="https://boostmypost.io/static/assets/img/ship1.svg" style="padding-top: 6px; width: 21px;">'
+            newNode.getElementsByClassName('modebar-btn')[0].setAttribute('data-title','Show/hide surface equipment')
+
+            // newNode.getElementsByClassName('modebar-btn')[0].setAttribute('data-intro','You can toggle surface equipment on/off.')
+            // newNode.getElementsByClassName('modebar-btn')[0].setAttribute('data-step','4')
+
+            document.getElementsByClassName('modebar modebar--hover ease-bg')[0].setAttribute('data-intro',
+            '<h1 class="introjs-tooltip-title">Plot Controls</h1><br><br>You can toggle surface equipment on/off (Vessel, sources, streamers: Prime line only), download the plot, pan, zoom, and autoscale.')
+            document.getElementsByClassName('modebar modebar--hover ease-bg')[0].setAttribute('data-step','8')
+
+            $("#boat_trace").on({
+                click: function () {
+                    if (document.getElementById('boat_trace_status').classList.toString().includes('boat_trace_off')) {
+                        document.getElementById('boat_trace_status').classList.add('boat_trace_on')
+                        document.getElementById('boat_trace_status').classList.remove('boat_trace_off')
+                    } else {
+                        document.getElementById('boat_trace_status').classList.add('boat_trace_off')
+                        document.getElementById('boat_trace_status').classList.remove('boat_trace_on')
+                    }
+
+                    checkInputs(true)
+                },
+                mouseenter: function () {
+                    document.getElementById('boat_img').setAttribute('src', 'https://boostmypost.io/static/assets/img/ship.svg')
+                },
+                mouseleave: function () {
+                    document.getElementById('boat_img').setAttribute('src', 'https://boostmypost.io/static/assets/img/ship1.svg')
+                }
+            });
+
+        }
+
+    }
+
+    // setbacks dropdown - when setback is changed, check for Catenary to toggle crl_row visibility
+    function setbacksDropdownChanged() {
+
+        if ($('#setbacks').val() == 'Catenary') {
+            document.getElementById('crl_row').style.visibility = 'visible'
+        } else {
+            document.getElementById('crl_row').style.visibility = 'hidden'
+        }
+
+        $('#setback_type').html( $('#setbacks').val() )
+
+        checkInputs(true)
+
+    }
+
+    // Step 1 - checkInputs
+    function checkInputs(makeTables) { // makeTables passes true/false value through several child functions. It used in runCalculations to determine if we need to update the tables via generateTables()
+
+        // Inputs
+        let number_of_streamers = parseFloat($('#number_of_streamers').val())
+        let streamer_spacing = parseFloat($('#streamer_spacing').val())
+        let streamer_length = parseFloat($('#streamer_length').val())
+        let group_spacing = parseFloat($('#group_spacing').val())
+        let ntsd = parseFloat($('#ntsd').val()) // Near Trace SetBack Distance
+        let setbacks = $('#setbacks').val()
+        let crl = parseFloat($('#crl').val()) // Catenary Rope Length
+
+        let number_of_sources = parseFloat($('#number_of_sources').val())
+        let source_spacing = parseFloat($('#source_spacing').val())
+        let shotpoint_interval = parseFloat($('#shotpoint_interval').val())
+        let ssd = parseFloat($('#ssd').val()) // Source Setback Distance
+
+        inputs = {'number_of_streamers': number_of_streamers, 'streamer_spacing': streamer_spacing,
+                  'streamer_length': streamer_length, 'group_spacing': group_spacing, 'near_trace_setback_distance': ntsd,
+                  'setback_type': setbacks, 'catenary_rope_length':crl, 'number_of_sources': number_of_sources, 'source_spacing': source_spacing,
+                  'shotpoint_interval': shotpoint_interval, 'source_setback_distance': ssd}
+
+        // Step 2 ->
+        runCalculations(makeTables=makeTables, inputs=inputs)
+
+    }
+
+    // Step 2 - runCalculations
+    function runCalculations(makeTables, inputs) {
+        
+        // Inputs
+        let number_of_streamers = inputs['number_of_streamers']
+        let streamer_spacing = inputs['streamer_spacing']
+        let streamer_length = inputs['streamer_length']
+        let group_spacing = inputs['group_spacing']
+        let ntsd = inputs['near_trace_setback_distance'] // Near Trace SetBack Distance
+        let setbacks = inputs['setback_type']
+        let crl = inputs['catenary_rope_length'] // Catenary Rope Length
+
+        let number_of_sources = inputs['number_of_sources']
+        let source_spacing = inputs['source_spacing']
+        let shotpoint_interval = inputs['shotpoint_interval']
+        let ssd = inputs['source_setback_distance'] // Source Setback Distance
+
+        // Intermediary calculations
+        let max_spread = Math.max((number_of_sources * source_spacing), (number_of_streamers, streamer_spacing))
+        let min_elements = Math.min(number_of_streamers, number_of_sources)
+        let inline_pop = number_of_sources * shotpoint_interval
+        let outer_to_outer_streamer = (number_of_streamers - 1) * streamer_spacing
+        let nominal_near_trace_offset = ntsd - ssd
+        let rope_length = crl / (streamer_spacing * (number_of_streamers - 1))
+        let catenary_left = [1.432, -15.757, 71.886, -174.200, 236.890, -171.960, 52.579]
+        let catenary_right = [6, 5, 4, 3, 2, 1, 0]
+        let cca = 0 // Catenary Constant (A)
+            for (var i=0; i < catenary_left.length; i++) {
+                cca += (catenary_left[i] * (rope_length ** catenary_right[i]))
+            }
+        let catenary_y0 = cca * Math.cosh(0)
+        let raw_setback = outer_to_outer_streamer * catenary_y0
+        let line_width = 2
+        if ( (number_of_sources * number_of_streamers) > 50) { // graph will be larger and the lines will be harder to look at if we don't drop the line width
+            line_width = 1
+        }
+
+        // Result calculations
+        let vls = Math.max((number_of_sources * source_spacing), (number_of_streamers * streamer_spacing)) / 2
+        let cmp = number_of_streamers * number_of_sources // CMP Lines Per Vessel Pass
+        let ucs = getUCS(min_elements, source_spacing, streamer_spacing, number_of_sources) // Uniform Crossline Sample
+        let ali = getALI(min_elements, source_spacing, streamer_spacing, number_of_sources) // Adjacent Lines Interleaved
+        let cics = getCICS(min_elements, source_spacing, streamer_spacing) // Co-incident Crossline Samples
+        let ncbs = vls / (number_of_streamers * number_of_sources) // Nominal Crossline Sample Interval
+        let nilbs = group_spacing / 2 // Nominal In-Line Sample Interval
+        let fold = (group_spacing * (streamer_length / group_spacing)) / (2 * shotpoint_interval * number_of_sources) // Nominal Fold
+        let trace_density = (fold * 1000) / (ncbs * nilbs)
+
+        // Step 3 -> Set results
+        setResultNum(vls, '#vls')
+        setResultNum(cmp, '#cmp')
+        setResultStr(ucs, '#ucs') // Yes / No
+        setResultStr(ali, '#ali') // Yes / No
+        setResultStr(cics, '#cics') // Yes / No
+        setResultNum(ncbs, '#ncbs')
+        setResultNum(nilbs, '#nilbs')
+        setResultNum(fold, '#fold')
+        setResultNum(trace_density, '#trace_density')
+
+        results = {'vessel_line_spacing': vls, 'CMP_lines_per_vessel_pass': cmp,
+                  'uniform_crossline_sample': ucs, 'adjacent_lines_interleaved': ali,
+                  'coincident_crossline_samples': cics, 'nominal_crossline_sample_interval': ncbs,
+                  'nominal_inline_sample_interval': nilbs, 'nominal_fold': fold,'trace_density': trace_density}
+
+
+        // Step 4 -> Runs if an input was changed that impacts the following calculations & if all the user's inputs were valid
+        if (makeTables == true) {
+            let source_data = getSourceData(number_of_sources, source_spacing, ssd)
+            let streamer_data = getStreamerData(number_of_streamers, streamer_spacing, vls)
+            let inline_data = getInlineData(streamer_data, setbacks, ntsd, ssd, outer_to_outer_streamer, cca, raw_setback)
+            let CMP_data = getCMPData(source_data, streamer_data)
+            let chart_data = getChartData(CMP_data, inline_data, vls, ssd, streamer_length, line_width)
+
+            setMetaStorage(source_data, streamer_data, CMP_data, inline_data, ssd, setbacks, inputs, results)
+            generateTables(source_data, streamer_data, CMP_data, inline_data, ssd)
+
+            let errors = checkErrors(setbacks, number_of_streamers, streamer_spacing, crl, inline_data, group_spacing, streamer_length)
+
+            if (errors == false) {
+                if (document.getElementById('boat_trace_status').classList.toString().includes('boat_trace_on')) {
+                    let surface_equipment_data = getSurfaceEquipment(source_data, streamer_data, inline_data, number_of_sources, source_spacing, ssd, streamer_length)
+                    for (var i=0; i < surface_equipment_data.length; i++) {
+                        chart_data.push(surface_equipment_data[i])
+                    }
+                }
+
+                generateChart(chart_data)
+            } else {
+                defaultChart()
+            }
+            
+        }
+
+    }
+
+    function setMetaStorage(source_data, streamer_data, CMP_data, inline_data, ssd, setback_type, inputs, results) {
+        $('#source_data').data('json', source_data)
+        $('#streamer_data').data('json', streamer_data)
+        $('#inline_data').data('json', inline_data)
+        $('#CMP_data').data('json', CMP_data)
+        $('#ssd_data').data('json', ssd)
+        $('#setback_type_data').data('json', setback_type)
+        $('#inputs_data').data('json', inputs)
+        $('#results_data').data('json', results)
+    }
+    
+    function checkErrors(setbacks, number_of_streamers, streamer_spacing, crl, inline_data, group_spacing, streamer_length) {
+
+            let errors = false
+            resetAllInputErrors()
+
+            if (setbacks == 'Catenary') {
+                let valueToCheck = ((number_of_streamers - 1) * streamer_spacing)
+                if ( valueToCheck > crl ) {
+                    appendError('crl')
+                    errors = true
+                }
+            }
+
+            if (setbacks == 'Radial') {
+                if ( inline_data.includes('Error') ) {
+                    appendError('ntsd')
+                    errors = true
+                }
+            }
+
+            if (group_spacing >= streamer_length) {
+                appendError('group_spacing')
+                errors = true
+            }
+
+            return errors
+
+    }
+
+        function resetAllInputErrors() {
+            let inputs = document.getElementsByClassName('input_error')
+            let tips = document.getElementsByClassName('input_error_tip')
+
+            for (var i=0; i < inputs.length; i++) {
+                inputs[i].classList.remove('input_error')
+            }
+            for (var i=0; i < tips.length; i++) {
+                tips[i].classList.remove('input_error_tip')
+            }
+        }
+
+        function appendError(inputId) {
+            document.getElementById(inputId).classList.add('input_error')
+            document.getElementById(inputId + '_tip').classList.add('input_error_tip')
+        }
+
+
+    const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-right',
+            iconColor: 'white',
+            customClass: {
+                popup: 'colored-toast'
+            },
+            showConfirmButton: false,
+            timer: 3500,
+            timerProgressBar: true
+        })
+
+    const ToastLong = Swal.mixin({
+            toast: true,
+            position: 'top-right',
+            iconColor: 'white',
+            customClass: {
+                popup: 'colored-toast'
+            },
+            showConfirmButton: false,
+            timer: 5000,
+            timerProgressBar: true
+        })
+
+
+    $('#number_of_streamers').on( 'keyup', function () {
+
+        if ($(this).val() > 20) {
+
+            $(this).val(20);
+
+            Toast.fire({
+                icon: 'error',
+                title: '20 is the MAX for Streamers!'
+            })
+
+            checkInputs(true)
+
+        }
+
+    }); // number_of_streamers
+
+
+    $('#number_of_sources').on( 'keyup', function () {
+
+        if ($(this).val() > 8) {
+
+            $(this).val(8);
+
+            Toast.fire({
+                icon: 'error',
+                title: '8 is the MAX for Sources!'
+            })
+
+            checkInputs(true)
+
+        }
+
+    }); // number_of_streamers
+
+
+    function getSurfaceEquipment(source_data, streamer_data, inline_data, number_of_sources, source_spacing, ssd, streamer_length) {
+        let surface_equipment_data = []
+
+        // BOAT
+        let boat_trace = {
+            type: 'line',
+            x: [-25,-25,0,25,25,-25],
+            y: [-50,10,50,10,-50,-50],
+            mode: 'lines',
+            line: {
+                color: '#004B7A',
+                width: 3
+            }
+        }
+
+        surface_equipment_data.push(boat_trace)
+
+        // BOAT (DOTS)
+        for (var i=0; i < source_data.length; i++) {
+            surface_equipment_data.push({
+                type: 'dot',
+                x: [source_data[i]],
+                y: [-ssd],
+                mode: 'dots',
+                line: {
+                    color: '#004B7A',
+                    width: 10
+                }
+            })
+        }
+
+        // BOAT (LINES)
+        for (var i=0; i < streamer_data.length; i++) {
+            
+            let x_coordinates = streamer_data[i]
+            let y_top = -inline_data[i]
+            let y_bottom = -inline_data[i] - streamer_length
+
+            let new_layer_trace =  {
+                type: 'line',
+                x: [x_coordinates, x_coordinates],
+                y: [y_top, y_bottom],
+                mode: 'lines',
+                line: {
+                    color: '#004B7A',
+                    width: 3
+                }
+            }
+
+            surface_equipment_data.push(new_layer_trace)
+
+        }
+
+        return surface_equipment_data
+
+    }
+
+
+    function getUCS(min_elements, source_spacing, streamer_spacing, number_of_sources) {
+        if (min_elements == 1) {
+            return "Yes"
+        } else {
+            // console.log(round(source_spacing * number_of_sources) % streamer_spacing )
+            if ( ( (source_spacing * number_of_sources) % streamer_spacing ) == 0) {
+                return "Yes"
+            } else {
+                return "No"
+            }
+        }
+    }
+
+    function getALI(min_elements, source_spacing, streamer_spacing, number_of_sources) {
+        if (min_elements == 1) {
+            return "No"
+        } else {
+            if ( (source_spacing * number_of_sources) > streamer_spacing ) {
+                return "Yes"
+            } else {
+                return "No"
+            }
+        }
+    }
+
+    function getCICS(min_elements, source_spacing, streamers_spacing) {
+        if (min_elements == 1) {
+            return "No"
+        } else {
+            if ((source_spacing % streamers_spacing) == 0) {
+                return "Yes"
+            } else {
+                return "No"
+            }
+        }
+    }
+
+
+    function generateChart(chart_data, source_data, number_of_sources, source_spacing, ssd) {
+
+        let x_values = []
+        for (var i=0; i < chart_data.length; i++) {
+            x_values.push(chart_data[i]['x'][0])
+        }
+        x_max = Math.max(...x_values)
+        x_min = Math.min(...x_values)
+        x_range = Math.abs(x_max) + Math.abs(x_min)
+        y_limit = x_range / 2
+
+        
+        Plotly.newPlot(
+            'myDiv',
+            chart_data,
+            layout = {
+                height: 700,
+                // dragmode: 'pan',
+                showlegend: false,
+                xaxis: {
+                    showgrid: true,
+                    range: [x_min * 1.05, x_max * 1.05] // adds a 5% gap on either side
+                },
+                yaxis: {
+                    showgrid: true,
+                    showline: true,
+                    range: [-y_limit * 1.4 * 1.05, 75]
+                },
+                title: 'CMPs generated on 3 adjacent vessel passes',
+                images: [
+                    {
+                        x: 1.05,
+                        y: -.15,
+                        sizex: 0.10,
+                        sizey: 0.10,
+                        source: "https://static.wixstatic.com/media/6440e3_79209f11808643efaab19239b58ec2f9~mv2.png/v1/fill/w_172,h_93,al_c,usm_2.00_1.00_0.00,enc_auto/No_Background.png",
+                        xanchor: "right",
+                        xref: "paper",
+                        yanchor: "bottom",
+                        yref: "paper"
+                    }
+                ],
+            },
+            config={'modeBarButtonsToRemove': ["select", "lasso"], responsive: true, 'displaylogo': false}, // 'scrollZoom': true, 
+        );
+
+        appendBoatTraceIcon()
+
+    }
+
+
+    function getChartData(CMP_data, inline_data, vls, ssd, streamer_length, line_width) {
+        let chart_data = []
+
+        for (var i=0; i < Object.keys(CMP_data).length; i++) {
+            for (var x=0; x < CMP_data[i].length; x++) {
+                let y_front = round((-inline_data[x] - ssd) / 2)
+                let y_rear = round(y_front - (streamer_length / 2))
+                
+                let standard =  {
+                    type: 'line',
+                    x: [CMP_data[i][x], CMP_data[i][x]],
+                    y: [y_front, y_rear],
+                    mode: 'lines',
+                    line: {
+                        color: '#A0DCD2',//'rgb(219, 64, 82)',
+                        width: line_width
+                    }
+                };
+            
+                let standard_plus_vls = {
+                    type: 'line',
+                    x: [CMP_data[i][x] + vls, CMP_data[i][x] + vls],
+                    y: [y_front, y_rear],
+                    mode: 'lines',
+                    line: {
+                        color: '#FFCD99',
+                        width: line_width
+                    }
+                };
+
+                let standard_minus_vls = {
+                    type: 'line',
+                    x: [CMP_data[i][x] - vls, CMP_data[i][x] - vls],
+                    y: [y_front, y_rear],
+                    mode: 'lines',
+                    line: {
+                        color: '#FFCD99',
+                        width: line_width
+                    }
+                };
+
+                chart_data.push(standard)
+                chart_data.push(standard_plus_vls)
+                chart_data.push(standard_minus_vls)
+            }
+        }
+
+        return chart_data
+    }
+
+
+    // Extender function for runCalculations()
+    function getSourceData(number_of_sources, source_spacing, ssd) {
+        let source_offsets = []
+
+            for (var i=0; i < number_of_sources; i++) {
+                if (i == 0) {
+                    source_offsets.push(roundTo4(-source_spacing * ( (number_of_sources / 2) - 0.5 )))
+                } else {
+                    source_offsets.push(roundTo4(source_offsets[i-1] + source_spacing))
+                }
+            }
+        
+        return source_offsets
+
+    }
+
+    // Extender function for runCalculations()
+    function getStreamerData(number_of_streamers, streamer_spacing, vls) {
+        let streamer_offsets = []
+
+            for (var i=0; i < number_of_streamers; i++) {
+                if (i == 0) {
+                    streamer_offsets.push( (streamer_spacing / 2) - vls )
+                } else {
+                    streamer_offsets.push( streamer_offsets[i-1] + streamer_spacing )
+                }
+            }
+            
+        return streamer_offsets
+    }
+
+
+    // Extender function for runCalculations()
+    function getInlineData(streamer_data, setback_type, ntsd, ssd, outer_to_outer_streamer, cca, raw_setback, number_of_streamers) {
+        let inline_data = []
+
+            for (var i=0; i < streamer_data.length; i++) {
+                inline_data.push( getSetback(setback_type, number_of_streamers, ntsd, ssd, streamer_data[i], raw_setback, outer_to_outer_streamer, cca) )
+            }
+            
+        return inline_data
+    }
+
+
+    // Extender function for getInlineData()
+    function getSetback(setback_type, number_of_streamers, ntsd, ssd, streamer_offset, raw_setback, outer_to_outer_streamer, cca) {
+        let result = null
+
+            if (setback_type == 'Level') {
+                result = ntsd // Level is always set directly to Near Trace Setback Distance
+            } else if (setback_type == 'Radial') {
+                result = getRadialData(ntsd, ssd, streamer_offset)
+            } else if (setback_type == 'Catenary') {
+                result = getCatenaryData(raw_setback, ntsd, outer_to_outer_streamer, cca, streamer_offset)
+            }
+
+        return result   
+    }
+
+
+    // Extender function for getSetback()
+    function getRadialData(ntsd, ssd, streamer_offset) {
+        let nominalNearTraceOffset = ntsd - ssd
+        let radialData = round((ntsd - nominalNearTraceOffset) + Math.sqrt( ( nominalNearTraceOffset * nominalNearTraceOffset ) - ( streamer_offset * streamer_offset ) ))
+
+        if (is_NaN(radialData)) { // checks if the result returned 'NaN'
+            radialData = 'Error'
+        }
+
+        return radialData
+    }
+
+
+
+    function is_NaN(x) {
+        return x !== x;
+    };
+
+
+    // Extender function for getSetback()
+    function getCatenaryData(raw_setback, ntsd, outer_to_outer_streamer, cca, streamer_offset) {
+        let raw_catenary_setback = outer_to_outer_streamer * cca * Math.cosh( streamer_offset / (outer_to_outer_streamer * cca) )
+        let result = round((raw_setback + ntsd) - raw_catenary_setback)
+
+        return result
+    }
+
+
+    
+    function getCMPData(source_data, streamer_data) {
+        let CMP_data = {}
+
+        for (let tr=0; tr < source_data.length; tr++) {
+            CMP_data[tr] = []
+                for (var td=0; td < streamer_data.length; td++) {
+                    let CMP_value = round( (source_data[tr] + streamer_data[td]) / 2 )
+                    CMP_data[tr].push(CMP_value)
+                }
+        }
+
+        return CMP_data
+    }
+
+
+    // Step 4 - generateTables
+    function generateTables(source_data, streamer_data, CMP_data, inline_data, ssd) {
+
+        // SOURCE TABLE
+        let inline_source_data = []
+        for (var i=0; i < source_data.length; i++) {
+            inline_source_data.push(ssd)
+        }
+        updateTable('source_table', {0: source_data, 1: inline_source_data})
+
+
+        // STREAMER TABLE
+        updateTable('streamer_table', {0: streamer_data, 1: inline_data})
+
+
+        // CMP TABLE (Vertical)
+        source_data.unshift(null) // Setting first array index to null so we don't iterate over the 'X Line Offset' header.
+        updateVertical('CMP_Table', {0: null, 1: source_data})
+
+
+        // CMP Table (Horizontal)
+        CMP_table_data = {}
+        CMP_table_data[0] = streamer_data // X Line Offset Data
+        for (var i=0; i < Object.keys(CMP_data).length; i++) {
+            CMP_table_data[i + 1] = CMP_data[i] // Need to adjust the dict. X Line Offset is at row 0, CMP calculations need to inject on row 1 onwards...
+        }
+        updateTable('CMP_Table', CMP_table_data)
+
+    }
+
+
+    function updateTable(tableId, newDataArray) {
+        let tableRows = document.getElementById(tableId).getElementsByTagName('tbody')[0].getElementsByTagName('tr')
+        for (var x=0; x < tableRows.length; x++) {
+            let rowCells = tableRows[x].getElementsByTagName('td') // for each row, it gets all td's
+            for (var i=0; i < rowCells.length; i++) {
+                try {
+                    rowCells[i].textContent =  newDataArray[x][i].toString() // for each td, it pulls from the corresponding dictionary / index of the list to inject the data
+                } catch (err) {
+                    if (err.toString().includes('Cannot read properties of undefined')) {
+                        rowCells[i].textContent =  '' // Defaults missing values to blank
+                    }
+                }
+            }
+        }    
+    }
+
+
+    function updateVertical(tableId, newDataArray) {
+        let tableRows = document.getElementById(tableId).getElementsByTagName('tbody')[0].getElementsByTagName('tr') // gets all rows in table body
+        for (var x=0; x < tableRows.length; x++) {
+            let rowVerticalHeaders = tableRows[x].getElementsByTagName('th') // for each row, it gets all th's (vertical headers)
+            for (var i=0; i < rowVerticalHeaders.length; i++) {
+                try {
+                    rowVerticalHeaders[i].textContent = newDataArray[i][x].toString() // newDataArray[dictKey][arrayIndex].toString()
+                } catch (err) {
+                    if (err.toString().includes('Cannot read properties of undefined')) {
+                        rowVerticalHeaders[i].textContent =  '' // Defaults missing values to blank
+                    }
+                }
+            }
+        }  
+    }
+
+
+    // Extender functions for runCalculations()
+    function setResultNum(resultCalculation, resultName) {
+
+        if (typeof(resultCalculation) === 'number' && resultCalculation != 'Infinity') {
+
+            if (resultName == '#trace_density') {
+
+                $(resultName).html(roundTo6(resultCalculation))
+
+            } else if (resultName == '#fold') {
+
+                $(resultName).html(roundTo4(resultCalculation))
+
+            } else {
+
+                $(resultName).html(round(resultCalculation))
+
+            }
+
+        } else {
+
+            $(resultName).html("")
+
+        }
+
+    }
+
+
+    function setResultStr(resultStr, resultName) {
+
+        if (resultStr == 'Yes' || resultStr == 'No') {
+
+            $(resultName).html(resultStr)
+
+            checkWarning(resultStr, resultName)
+
+        } else { // this isnt really possible. Dont let it confuse you, it shouldve been deleted. Yes/No are the only two possibilities.
+
+            $(resultName).html("")
+
+        }
+
+    }
+
+    function checkWarning(resultStr, resultName) {
+        if (resultName == '#ucs') {
+            if (resultStr == 'No') {
+                addErrorWarning(resultName)
+            } else {
+                resetErrorWarning(resultName)
+            }
+        } else {
+            if (resultStr == 'Yes') {
+                addErrorWarning(resultName)
+            } else {
+                resetErrorWarning(resultName)
+            }
+        }
+    }
+
+    function resetErrorWarning(resultName) {
+        if ($(resultName).parent().hasClass( 'result_error' )) {
+            $(resultName).parent().removeClass( 'result_error' )
+        }
+    }
+
+    function addErrorWarning(resultName) {
+        if ($(resultName).parent().hasClass( 'result_error' ) == false) {
+            $(resultName).parent().addClass( 'result_error' )
+        }
+    }
+
+
+    function round(num) {
+        return Math.round(num * 10) / 10
+    }
+
+    function roundTo4(num) {    
+        return +(Math.round(num + "e+4")  + "e-4");
+    }
+
+    function roundTo6(num) {    
+        return +(Math.round(num + "e+6")  + "e-6");
+    }
+
+    function exportToCsv(filename, rows) {
+        var processRow = function (row) {
+            var finalVal = '';
+            for (var j = 0; j < row.length; j++) {
+                var innerValue = row[j] === null ? '' : row[j].toString();
+                if (row[j] instanceof Date) {
+                    innerValue = row[j].toLocaleString();
+                };
+                var result = innerValue.replace(/"/g, '""');
+                if (result.search(/("|,|\n)/g) >= 0)
+                    result = '"' + result + '"';
+                if (j > 0)
+                    finalVal += ',';
+                finalVal += result;
+            }
+            return finalVal + '\n';
+        };
+
+        var csvFile = '';
+        for (var i = 0; i < rows.length; i++) {
+            csvFile += processRow(rows[i]);
+        }
+
+        var blob = new Blob([csvFile], { type: 'text/csv;charset=utf-8;' });
+        if (navigator.msSaveBlob) { // IE 10+
+            navigator.msSaveBlob(blob, filename);
+        } else {
+            var link = document.createElement("a");
+            if (link.download !== undefined) { // feature detection
+                // Browsers that support HTML5 download attribute
+                var url = URL.createObjectURL(blob);
+                link.setAttribute("href", url);
+                link.setAttribute("download", filename);
+                link.style.visibility = 'hidden';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        }
+    }
+
+    function sendTableData() {
+
+        let setback_type = $('#setback_type_data').data('json')
+        let ssd = $('#ssd_data').data('json')
+        let source_data = removeNull($('#source_data').data('json')) // not sure why, but there is an inexplicable null value at index 0 only in the source_data array/ MIND BOGGLING.....
+        let inline_source_data = Array.from(new Array(source_data.length), (val, index) => ssd) // creates an equal array comparable to source_data with ssd values.
+        let streamer_data = $('#streamer_data').data('json')
+        let inline_data = $('#inline_data').data('json')
+        let CMP_data = $('#CMP_data').data('json')
+        let inputs_data = $('#inputs_data').data('json')
+        let results_data = $('#results_data').data('json')
+
+        let source_IDs = Array.from(new Array(source_data.length), (val, index) => index + 1)
+        let streamer_IDs = Array.from(new Array(streamer_data.length), (val, index) => index + 1)
+        let CMP_arrays = Array.from(new Array(source_data.length), (val, index) => [index + 1, source_data[index], ...CMP_data[index]])
+        let csv_data = [
+            [],
+            [],
+            ['Geometry Calculations'],
+            [],
+            ['Source ID', ...source_IDs],	
+            ['Crossline Source Offsets', ...source_data],
+            ['Inline Source Offsets', ...inline_source_data],
+            [],
+            ['Streamer ID', ...streamer_IDs],
+            ['Crossline streamer offsets', ...streamer_data],
+            ['Inline Setback (' + setback_type + ')', ...inline_data],
+            [],
+            ['CMP Table','Streamer ID', ...streamer_IDs],
+            ['Source ID', 'X Line Offset', ...streamer_data]
+        ]
+
+        for (var i=0; i < CMP_arrays.length; i++) {
+            csv_data.push(CMP_arrays[i])
+        }
+
+        // Reverse for loop so we can use "unshift" to append the inputs in the order they are viewed on the website.
+        let inputs_array = Array.from(new Array(Object.keys(inputs_data).length), (val, index) => [Object.keys(inputs_data)[index], Object.values(inputs_data)[index]])
+        let results_array = Array.from(new Array(Object.keys(results_data).length), (val, index) => ['', Object.keys(results_data)[index], Object.values(results_data)[index]])
+        let combined_inputs_results_array = inputs_array
+        for (var i=0; i < results_array.length; i++) {
+            combined_inputs_results_array[i] = [...combined_inputs_results_array[i], ...results_array[i]]
+        }
+
+        for (var i=combined_inputs_results_array.length - 1; i >= 0; i--) { // the array forces you to do array.length - 1 ... but it acts the way you'd expect dont let it bother you.
+            
+            csv_data.unshift(combined_inputs_results_array[i])
+
+            if (i == 0) { // last digit in loop
+                csv_data.unshift([])
+                csv_data.unshift(["Inputs",'','',"Results"])
+            }
+
+        }
+
+        exportToCsv('acteq_towed_streamer_fold_calculations.csv', csv_data)
+
+    }
+
+    function removeNull(array) {
+        return array.filter(x => x !== null)
+    };
+</script>
